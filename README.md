@@ -1,16 +1,28 @@
 # hallyy
 HALLYY Agricultural drone soil sampling project 
 
-## Frontend Webapp
+## Solution Breakdown
+Our proposed solution allows for a highly automated method of collecting soil samples from farms, with an emphasis on ease of user control. This solution combines a front end UI with a drone autopilot and planning system. This allows a drone, equipped with a custom designed sampling device, to survey a field and collect samples at a specified precision without needing the overhead cost of a human operator.
 
-### Intro
+### Frontend Webapp
+
 We’ve built an end-to-end drone software system, from a custom consumer-facing web-app to a drone autopilot and mission control software in the backend. 
 
 Currently, our frontend allows a user to pan and zoom into their farmland from satellite view. With our intuitive UI, they can easily select the area of soil they want sampled by drawing a polygon shape. Our web app automatically populates the selected area with a grid of markers that can then be dragged around individually, each representing a sampling coordinate. 
 
-Once the user is satisfied, all they need to do is click Start Soil Sampling, and the coordinates are sent to our backend Python server, where the entire flight mission is planned and automated. The server then relays the coordinates to the drone over wireless communication and our drone begins sampling the soil in those locations.
+### Backend Mission Planning
 
-### Technologies
+Once the user is satisfied, all they need to do is click Start Soil Sampling, and the coordinates are sent to our backend Python server. An optimal flight path is then determined to allow the drone to sample all the desired points in the shortest time. The backendw then converts this flight path into a format compatable with the ardupilot drone control suite. As an approprate drone would be prohibitively expensive at this stage, with models over $30,000, the backend is currently set up to test the proposed mission plan in Gazebo, a simulation software.
+
+Ultimately, the intention is for the server to relay these commands to the corresponding drone platform that is sent to the user, as well as collect telemetry data based on drone performance. It will also store the results of the soil sampling from laboratory testing, and provide this information to the front end to produce an easy to understand map of soil characteristics for the end user.
+
+### Physical Drone Platform and Sampler
+
+The drone platform consists of an existing heavy lift drone, with the sampling apparatus attached. The sampling apparatus consists of a rotating carousel of sampling probes - steel tubes measuring 30cm x 2cm - and a retreival vehicle into which these probes can be inserted or extracted from. This vehicle can then be lowered down by a motorized winch to the ground, at which time it would anchor itself using deployable legs and drive the probe into the soil to collect a sample. After collection, it would be retreived by the winch, the old probe containing the sample will be extracted, and a new probe will be inserted, readying the device for the next sampling location. The drone would move along the planned path, stopping at the desired locations to perform the above procedure.
+
+## Technologies
+
+### Frontend Technologies
 Our web-app frontend is built using React, TypeScript, CSS, and Webpack. The frontend features an open source mapping library called Mapbox GL. 
 
 The frontend source code is split into 5 main TypeScript files: 
@@ -47,10 +59,9 @@ npm run start
 
 Now, you should be able to access the app in your browser at the url `localhost:8080`.
 
-## Backend Drone System
+### Backend Technologies
 Our backend is currently written in Python, and uses several open-source libraries, including Pymavlink, Gazebo, and PX4. These are open-source libraries for mission planning and communicating with industry-standard drones. 
 
-### Technologies
 Our backend is currently split into two files: 
 
 - offboard_position_ned.py
