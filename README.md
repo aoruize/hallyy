@@ -102,7 +102,7 @@ The retreival mechanism is currently designed to be controlled with arduino for 
 Matthew Ao, Daniel Han, Gloria Yang, Julia Li, Tian Yu, Tony Liu
 
 ### Acknowledgements
-We would like to give acknowledgement to the ardupilot open source drone control software, as well as the gazebo simulation suite for allowing physical simulation of the drone system.
+We would like to give acknowledgement to the open source React MapboxGL library, the PX4 open source drone control software, as well as the gazebo simulation suite for allowing physical simulation of the drone system.
 
 
 
