@@ -1,5 +1,6 @@
 # HALLYY
-HALLYY Agricultural drone soil sampling project 
+HALLYY Agricultural drone soil sampling project  
+Video Presentation: https://www.youtube.com/watch?v=CeaDzJ1-T0U&ab_channel=MatthewAo 
 
 ## Solution Breakdown
 Our proposed solution allows for a highly automated method of collecting soil samples from farms, with an emphasis on ease of user control. This solution combines a front-end UI with a drone autopilot and planning system. This allows a drone, equipped with a custom-designed sampling device, to survey a field and collect samples at a specified precision without needing the overhead cost of a human operator.
