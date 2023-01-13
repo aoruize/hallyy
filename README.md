@@ -31,6 +31,22 @@ Pin.tsx contains the React component for displaying pin markers on the map.
 
 Polygon-utils.ts contains the TypeScript algorithms for calculating the center point of any drawn polygon, thereby giving the location coordinates to send to the backend. This is where we plan on writing a more complex algorithm for determining how to disseminate the points in any drawn area in an even distribution across the polygon. 
 
+### Frontend Instructions
+
+Clone the repository. Navigate into the hallyy-frontend directory, and run the following command to install all dependencies:
+
+```
+npm i
+```
+
+Then, run the React app on local development using the following command:
+
+```
+npm run start
+```
+
+Now, you should be able to access the app in your browser at the url `localhost:8080`.
+
 ## Backend Drone System
 Our backend is currently written in Python, and uses several open-source libraries, including Pymavlink, Gazebo, and PX4. These are open-source libraries for mission planning and communicating with industry-standard drones. 
 
