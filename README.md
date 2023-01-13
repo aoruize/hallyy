@@ -61,7 +61,13 @@ offboard_position_ned.py contains the code for simulating flying drone in a squa
 mission.py is still in prototype mode, although we are writing the code for automating a pymavlink mission based on gps co-ordinates from frontend.
 
 ### Backend Instructions
-To run our drone simulation, you need to download px4 codebase and gazebo drone simulator and run the px4 software in the loop build.
-Afterwards, you can execute the pymavlink scripts in our Python files.
+To run our drone simulation, download px4 codebase and gazebo drone simulator and run the px4 software in the loop build.
+Then, navigate into hallyy-backend to execute the backend pymavlink scripts.
+
+The download links can be found here:
+
+- Pymavlink: https://github.com/ArduPilot/pymavlink/
+- Gazebo simulator: https://docs.px4.io/main/en/simulation/gazebo.html
+- PX4 Software in the Loop: https://docs.px4.io/main/en/simulation/
 
 To use QGroundControl, directly download app from internet and follow the instructions on their documentation: https://docs.qgroundcontrol.com/master/en/
