@@ -58,7 +58,7 @@ Our backend is currently split into two files:
 
 offboard_position_ned.py contains the code for simulating flying drone in a square given 4 coordinate locations, stopping at each corner to drop to the ground and sample the soil.
 
-mission.py is still in prototype mode, although we are writing the code for automating a pymavlink mission based on gps co-ordinates from frontend.
+mission.py is still in prototype mode, although we are writing the code for automating a pymavlink mission based on gps co-ordinates sent via API calls from the frontend.
 
 ### Backend Instructions
 To run our drone simulation, download px4 codebase and gazebo drone simulator and run the px4 software in the loop build.
