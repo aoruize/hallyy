@@ -14,9 +14,9 @@ import type {MarkerDragEvent, LngLat} from 'react-map-gl';
 
 const TOKEN = 'pk.eyJ1IjoibWF0dGhld2FvIiwiYSI6ImNsY3BoYXoyejFkM2UzbnA2OGlnZjJjdjgifQ.XfOl2pfREnD9xWiGs163OA'; // Set your mapbox token here
 
-const INITIAL_LATITUDE = 43.66924;
-const INITIAL_LONGITUDE = -79.43479;
-const MARKER_COUNT = 16;
+const INITIAL_LATITUDE = 44.1257143;
+const INITIAL_LONGITUDE = -79.3478998;
+const MARKER_COUNT = 8;
 const MARKER_SPACING = 0.001;
 
 const initialMarkers = Array.from({length: MARKER_COUNT}, (_, i) => ({
@@ -159,7 +159,7 @@ export default function App() {
       <header style={headerStyle}>
         <div style={logoStyle}>HALLYY</div>
         <div style={menuStyle}>
-          <Button style={buttonStyle} onClick={handleButtonClick}>Generate Locations</Button>{' '}
+          <Button style={buttonStyle} onClick={handleButtonClick}>Mark Start Point</Button>{' '}
           <Button style={buttonStyle}>Start Soil Sampling</Button>{' '}
         </div>
       </header>
