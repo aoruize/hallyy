@@ -170,7 +170,7 @@ export default function App() {
           longitude: INITIAL_LONGITUDE,
           zoom: 17,
         }}
-        mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
+        mapStyle="mapbox://styles/matthewao/cldc133bu000d01p9if4221ep"
         mapboxAccessToken={TOKEN}
       >
         {markers.map((marker, index) => (

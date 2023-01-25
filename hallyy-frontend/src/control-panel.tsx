@@ -25,9 +25,48 @@ function ControlPanel(props) {
           square meters
         </p>
       )}
+      <p>
+        Soil Sampling Results
+        <br />
+        sampled on <b>April 23, 2023</b>.
+      </p>
+      <hr />
+      <div className="input">
+        <label>Phosphorus</label>
+        <input
+          type="checkbox"
+          name="allday"
+          checked={true}
+        />
+      </div>
+      <div className="input">
+        <label>Potassium</label>
+        <input
+          type="checkbox"
+          name="allday"
+          checked={true}
+        />
+      </div>
+      <div className="input">
+        <label>Nitrogen</label>
+        <input
+          type="checkbox"
+          name="allday"
+          checked={true}
+        />
+      </div>
+      <div className={`input `}>
+        <label>Opacity: </label>
+        <input
+          type="range"
+          min={1}
+          step={1}
+        />
+      </div>
+      <hr />
       <div className="source-link">
         <a
-          href="https://github.com/visgl/react-map-gl/tree/7.0-release/examples/draw-polygon"
+          href="https://github.com/aoruize/hallyy/"
           target="_new"
         >
           View Code ↗
